@@ -1,0 +1,24 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<button onclick="p1()">click to call api</button>
+
+<br>
+
+<div class="loading">
+	loading...
+</div>
+
+<script>
+
+	function p1()
+	{
+		$.get("https://api.github.com/users",(data,status)=>{
+			console.log("err",status)
+			console.log("data",data)
+			let a=data.map(x=>x.avatar_url)
+			a=a.map(x=>`<img src='${x}' width="100" />`)
+			// console.log(a)
+			$(".loading").html(a)
+		})
+	}
+</script>

@@ -1,0 +1,34 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<button onclick="p1()">remove</button>
+<button onclick="p2()">empty</button>
+
+
+
+<ul>
+	<li>list items</li>
+	<li>list items</li>
+	<li>list items</li>
+	<li>list items</li>
+</ul>
+
+
+<textarea value="hello hi"></textarea>
+
+
+<script>
+	function p1()
+	{
+		$("ul,textarea").remove()
+	}
+	function p2()
+	{
+		$("ul,textarea").empty()
+	}
+	
+</script>
+
+
+
+

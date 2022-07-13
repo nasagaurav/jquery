@@ -1,0 +1,21 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<button onclick="p1()">click to call api</button>
+
+<br>
+
+<img src="" alt="" width="400" height="400">
+
+<script>
+
+	function p1()
+	{
+		$.get("https://randomuser.me/api/",(data,err)=>{
+			console.log("err",err)
+			console.log("datra",data)
+			let pic=data.results[0].picture.large
+			$("img").attr("src",pic)
+			// console.log(pic)
+		})
+	}
+</script>

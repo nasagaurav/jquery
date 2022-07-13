@@ -1,0 +1,57 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<button onclick="getFunction()">get</button>
+<button onclick="postFunction()">post</button>
+<button onclick="patchFunction()">patch</button>
+<button onclick="deleteFunction()">delete</button>
+
+<script>
+	const url="https://jsonplaceholder.typicode.com/users"
+	function getFunction()
+	{
+		// get function request to ajax
+		$.get(url,(err,data)=>{
+			console.log(err?err:data)
+		})
+	}
+	function postFunction()
+	{
+		let body={name:"gaurav",username:"nasa",email:"nasa@gmail.com"}
+		// post function request to ajax
+		$.post(url,body,(err,data)=>{
+			console.log(err?err:data)
+		})
+	}
+	function patchFunction()
+	{
+		let body={name:"gaurav nasa"}
+		// patch function request to ajax
+		
+		const options={
+			url:url+"/1",
+			data:body,
+			error:(e)=>console.log(e),
+			success:(d)=>console.log(d),
+			type:"PATCH"
+		}
+		$.ajax(options)
+	}
+	function deleteFunction()
+	{
+		let options={
+			url:url+"/1",
+			error:e=>console.log(e),
+			success:d=>console.log(d),
+			type:"DELETE"
+		}
+		// delete function request to ajax
+		$.ajax(options)
+	}
+</script>
+
+
+
+
+
+
+
