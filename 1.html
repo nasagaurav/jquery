@@ -2,6 +2,17 @@
 
 
 
+<textarea>copy from</textarea>
+<textarea>paste to</textarea>
+
+
+
 <script>
-	console.log($)//$ in jquery is a selector to select any element,class,id
+	$("textarea").bind("cut copy paste",p1)
+
+	function p1()
+	{
+		event.preventDefault()
+		alert("not allowed")
+	}
 </script>

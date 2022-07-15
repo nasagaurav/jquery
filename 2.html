@@ -1,38 +1,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<button onclick="p1()">hide</button>
-<button onclick="p2()">show</button>
-<button onclick="p3()">toggle</button>
 
-
-
-
-<h1>headinsg</h1>
-<h1>headinsg</h1>
-<h1>headinsg</h1>
-<h1>headinsg</h1>
-<h1>headinsg</h1>
-<h1>headinsg</h1>
-
+<a href="1.html">open 1.html file</a>
+<a href="1.html">open 1.html file</a>
+<a href="1.html">open 1.html file</a>
+<a href="1.html">open 1.html file</a>
+<a href="1.html">open 1.html file</a>
+<a href="1.html">open 1.html file</a>
+<a href="1.html">open 1.html file</a>
 
 <script>
-	function p1()
-	{
-		$("h1").hide()
-	}
-	function p2()
-	{
-		$("h1").show()
+	$("a").bind("click",p1)
 
+	function p1() {
+		event.preventDefault()
 	}
-	function p3()
-	{
-		$("h1").toggle()
-	}
-	
+
 </script>
-
-
-
-
-
